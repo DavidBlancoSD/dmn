@@ -35,6 +35,8 @@
     <genClasses ecoreClass="dmn.ecore#//InputClause">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//InputClause/InputValues"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//InputClause/InputExpression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//InputClause/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//InputClause/typeRef"/>
     </genClasses>
     <genClasses ecoreClass="dmn.ecore#//Expression">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dmn.ecore#//Expression/value"/>
