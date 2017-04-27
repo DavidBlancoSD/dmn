@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated dmn -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="dmn.presentation.DmnModelWizardID"
+            name="%_UI_DmnModelWizard_label"
+            class="dmn.presentation.DmnModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/DmnModelFile.gif">
+         <description>%_UI_DmnModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated dmn -->
+      <editor
+            id="dmn.presentation.DmnEditorID"
+            name="%_UI_DmnEditor_label"
+            icon="icons/full/obj16/DmnModelFile.gif"
+            extensions="dmn"
+            class="dmn.presentation.DmnEditor"
+            contributorClass="dmn.presentation.DmnActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
