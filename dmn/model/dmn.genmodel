@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/dmn/src" modelPluginID="dmn" modelName="Dmn" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>dmn.ecore</foreignModel>
+  <genPackages prefix="Dmn" disposableProviderFactory="true" ecorePackage="dmn.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="dmn.ecore#//BuiltinAggregator">
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//BuiltinAggregator/SUM"/>
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//BuiltinAggregator/COUNT"/>
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//BuiltinAggregator/MIN"/>
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//BuiltinAggregator/MAX"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="dmn.ecore#//HitPolicy">
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//HitPolicy/UNIQUE"/>
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//HitPolicy/FIRST"/>
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//HitPolicy/PRIORITY"/>
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//HitPolicy/ANY"/>
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//HitPolicy/COLLECT"/>
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//HitPolicy/RULEORDER"/>
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//HitPolicy/OUTPUTORDER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="dmn.ecore#//DecisionTableOrientation">
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//DecisionTableOrientation/RuleAsRow"/>
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//DecisionTableOrientation/RuleAsColumn"/>
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//DecisionTableOrientation/CrossTable"/>
+    </genEnums>
+    <genClasses ecoreClass="dmn.ecore#//DMNElement"/>
+    <genClasses ecoreClass="dmn.ecore#//UnaryTest"/>
+    <genClasses ecoreClass="dmn.ecore#//DecisionRule">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DecisionRule/inputEntry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DecisionRule/OutputEntry"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//LiteralExpression"/>
+    <genClasses ecoreClass="dmn.ecore#//InputClause">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//InputClause/InputValues"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//InputClause/InputExpression"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//Expression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dmn.ecore#//Expression/value"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//ItcmDcfinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//ItcmDcfinition/allowedValues"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//DecisionTable">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DecisionTable/input"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DecisionTable/decisionTable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//DecisionTable/hitPolicy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//DecisionTable/aggregation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//DecisionTable/preferredOrientation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//DecisionTable/outputLabel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DecisionTable/output"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//OutputClause">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//OutputClause/defaultOutputEntry"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dmn.ecore#//OutputClause/outputDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//OutputClause/outputValues"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//OutputClause/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//OutputClause/typeRef"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
