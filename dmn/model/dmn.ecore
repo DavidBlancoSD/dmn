@@ -2,21 +2,28 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="dmn" nsURI="http://www.example.org/dmn" nsPrefix="dmn">
   <eClassifiers xsi:type="ecore:EClass" name="DMNElement" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="UnaryTest" eSuperTypes="#//DMNElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UnaryTest" eSuperTypes="#//DMNElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DecisionRule" eSuperTypes="#//DMNElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputEntry" upperBound="-1"
         eType="#//UnaryTest" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="OutputEntry" lowerBound="1"
         upperBound="-1" eType="#//LiteralExpression" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LiteralExpression" eSuperTypes="#//Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LiteralExpression" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InputClause" eSuperTypes="#//DMNElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="InputValues" eType="#//UnaryTest"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="InputExpression" eType="#//LiteralExpression"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeRef" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//QName"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Expression" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" upperBound="-1"
@@ -30,6 +37,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="ItcmDcfinition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="allowedValues" eType="#//UnaryTest"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DecisionTable" eSuperTypes="#//Expression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="input" upperBound="-1"
@@ -50,7 +59,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputValues" eType="#//UnaryTest"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeRef" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//QName"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="BuiltinAggregator">
     <eLiterals name="SUM"/>

@@ -26,23 +26,32 @@
       <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//DecisionTableOrientation/CrossTable"/>
     </genEnums>
     <genClasses ecoreClass="dmn.ecore#//DMNElement"/>
-    <genClasses ecoreClass="dmn.ecore#//UnaryTest"/>
+    <genClasses ecoreClass="dmn.ecore#//UnaryTest">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//UnaryTest/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//UnaryTest/value"/>
+    </genClasses>
     <genClasses ecoreClass="dmn.ecore#//DecisionRule">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DecisionRule/inputEntry"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DecisionRule/OutputEntry"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//DecisionRule/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//DecisionRule/value"/>
     </genClasses>
-    <genClasses ecoreClass="dmn.ecore#//LiteralExpression"/>
+    <genClasses ecoreClass="dmn.ecore#//LiteralExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//LiteralExpression/name"/>
+    </genClasses>
     <genClasses ecoreClass="dmn.ecore#//InputClause">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//InputClause/InputValues"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//InputClause/InputExpression"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//InputClause/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//InputClause/typeRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//InputClause/value"/>
     </genClasses>
     <genClasses ecoreClass="dmn.ecore#//Expression">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dmn.ecore#//Expression/value"/>
     </genClasses>
     <genClasses ecoreClass="dmn.ecore#//ItcmDcfinition">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//ItcmDcfinition/allowedValues"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//ItcmDcfinition/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//ItcmDcfinition/value"/>
     </genClasses>
     <genClasses ecoreClass="dmn.ecore#//DecisionTable">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DecisionTable/input"/>
@@ -58,7 +67,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dmn.ecore#//OutputClause/outputDefinition"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//OutputClause/outputValues"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//OutputClause/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//OutputClause/typeRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//OutputClause/value"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
